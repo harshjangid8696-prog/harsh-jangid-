@@ -19,21 +19,26 @@ const LONG = new Set(["tagline", "description", "note"]);
 
 export default function AdminEditor() {
   const [token, setToken] = useState("");
+  const [cfg, setCfg] = useState<{ owner: string; repo: string; branch: string }>((initial as Any).admin);
   const [data, setData] = useState<Any>(initial);
   const [sha, setSha] = useState<string>("");
   const [tab, setTab] = useState("basics");
   const [status, setStatus] = useState<{ t: "ok" | "err" | "busy"; m: string } | null>(null);
   const [pending, setPending] = useState<{ path: string; file: File }[]>([]);
-  const { owner, repo, branch } = data.admin;
+  const { owner, repo, branch } = cfg;
   const hdr = { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "Content-Type": "application/json" };
 
-  useEffect(() => { const t = localStorage.getItem("gh_token"); if (t) setToken(t); }, []);
+  useEffect(() => {
+    const c = localStorage.getItem("gh_cfg"); if (c) try { setCfg(JSON.parse(c)); } catch {}
+    const t = localStorage.getItem("gh_token"); if (t) setToken(t);
+  }, []);
   useEffect(() => { if (token) { localStorage.setItem("gh_token", token); load(); } /* eslint-disable-next-line */ }, [token]);
 
   async function load() {
     setStatus({ t: "busy", m: "Loading latest content from GitHub…" });
     try {
       const r = await fetch(`${API}/repos/${owner}/${repo}/contents/data/site.json?ref=${branch}`, { headers: hdr, cache: "no-store" });
+      if (r.status === 404) throw new Error(`Repo "${owner}/${repo}" ya branch "${branch}" mein data/site.json nahi mila — logout karke sahi repo naam daalo`);
       if (!r.ok) throw new Error(r.status === 401 ? "Token galat hai" : `GitHub error ${r.status}`);
       const j = await r.json();
       setSha(j.sha);
@@ -63,7 +68,7 @@ export default function AdminEditor() {
         await putFile(p.path, await fileToB64(p.file), `Upload ${p.path}`);
       }
       setPending([]);
-      const newSha = await putFile("data/site.json", b64(JSON.stringify(data, null, 2)), "Update site content from admin");
+      const newSha = await putFile("data/site.json", b64(JSON.stringify({ ...data, admin: cfg }, null, 2)), "Update site content from admin");
       setSha(newSha);
       setStatus({ t: "ok", m: "Saved! Vercel 1–2 minute mein live update kar dega." });
     } catch (e: Any) { setStatus({ t: "err", m: e.message }); }
@@ -99,7 +104,7 @@ export default function AdminEditor() {
       <div className="flex items-center gap-3">
         <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-accent-light">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          {val && <img src={pend ? URL.createObjectURL(pend.file) : val} alt="" className="h-full w-full object-cover" onError={(e) => ((e.target as Any).style.opacity = 0)} />}
+          {val && <img src={pend ? URL.createObjectURL(pend.file) : val} alt="" className="h-full w-full object-cover" onError={(e) => { const t = e.target as HTMLImageElement; if (!t.src.startsWith("data:")) t.src = "data:image/gif;base64,R0lGODlhAQABAAAAACw="; }} />}
         </div>
         <div className="flex-1">
           <span className="text-xs font-medium text-muted">{label} <span className="text-faint">{val}</span></span>
@@ -155,9 +160,22 @@ export default function AdminEditor() {
         <li>Permissions → Repository → <b>Contents: Read and write</b></li>
         <li>Generate → token copy karke neeche paste karo</li>
       </ol>
-      <form onSubmit={(e) => { e.preventDefault(); const v = (e.currentTarget.elements.namedItem("t") as HTMLInputElement).value.trim(); if (v) setToken(v); }} className="mt-6 flex gap-2">
-        <input name="t" type="password" placeholder="github_pat_…" className="flex-1 rounded-xl border border-line bg-white px-3 py-2 text-sm" />
-        <button className="btn btn-primary">Login</button>
+      <form onSubmit={(e) => {
+        e.preventDefault(); const f = e.currentTarget.elements as Any;
+        const c = { owner: f.owner.value.trim(), repo: f.repo.value.trim(), branch: f.branch.value.trim() || "main" };
+        localStorage.setItem("gh_cfg", JSON.stringify(c)); setCfg(c);
+        const v = f.t.value.trim(); if (v) setToken(v);
+      }} className="mt-6 space-y-3">
+        <div className="grid grid-cols-3 gap-2">
+          <label className="text-xs text-muted">GitHub username<input name="owner" defaultValue={cfg.owner} className="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2 text-sm text-ink" /></label>
+          <label className="text-xs text-muted">Repo name (exact)<input name="repo" defaultValue={cfg.repo} className="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2 text-sm text-ink" /></label>
+          <label className="text-xs text-muted">Branch<input name="branch" defaultValue={cfg.branch} className="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2 text-sm text-ink" /></label>
+        </div>
+        <p className="text-xs text-faint">Repo naam GitHub URL se copy karo: github.com/<b>username</b>/<b>repo-name</b></p>
+        <div className="flex gap-2">
+          <input name="t" type="password" placeholder="github_pat_…" className="flex-1 rounded-xl border border-line bg-white px-3 py-2 text-sm" />
+          <button className="btn btn-primary">Login</button>
+        </div>
       </form>
     </main>
   );
@@ -167,7 +185,7 @@ export default function AdminEditor() {
     <main className="min-h-screen bg-paper">
       <div className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur">
         <div className="wrap flex h-14 items-center justify-between gap-3">
-          <span className="font-display font-extrabold text-xl">Edit site</span>
+          <span className="font-display font-extrabold text-xl">Edit site <span className="text-xs font-body font-normal text-faint">{owner}/{repo}</span></span>
           <div className="flex items-center gap-2">
             {status && (
               <span className={`hidden sm:inline-flex items-center gap-1 text-xs ${status.t === "err" ? "text-red-600" : status.t === "ok" ? "text-green-700" : "text-muted"}`}>
@@ -176,7 +194,7 @@ export default function AdminEditor() {
             )}
             <a href="/" target="_blank" className="btn btn-ghost !py-1.5 !px-3 text-xs"><ExternalLink size={13} /> View site</a>
             <button onClick={save} disabled={status?.t === "busy"} className="btn btn-primary !py-1.5 !px-4 text-xs"><Save size={13} /> Save {pending.length ? `(+${pending.length} img)` : ""}</button>
-            <button onClick={() => { localStorage.removeItem("gh_token"); setToken(""); }} className="p-2 text-muted" title="Logout"><LogOut size={15} /></button>
+            <button onClick={() => { localStorage.removeItem("gh_token"); setToken(""); setStatus(null); }} className="p-2 text-muted" title="Logout"><LogOut size={15} /></button>
           </div>
         </div>
       </div>
