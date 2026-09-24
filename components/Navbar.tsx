@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/85 backdrop-blur">
       <div className="wrap flex h-16 items-center justify-between">
-        <a href="#top" className="font-display text-2xl tracking-tight">
+        <a href="#top" className="font-display font-extrabold text-2xl tracking-tight">
           {site.name}<span className="text-accent">.</span>
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted md:flex">
