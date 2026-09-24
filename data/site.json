@@ -4,21 +4,51 @@
   "tagline": "I make creatives that stop the scroll and run social media that actually grows — reels, carousels, thumbnails, brand visuals and the whole content calendar behind them.",
   "location": "Jaipur, India",
   "email": "harshjangid8696@gmail.com",
-  "phone": "+91 00000 00000",
-  "photo": "/photo.jpg",
+  "phone": "+91 9376564276",
+  "photo": "/nri-penalty.jpg",
   "cvFile": "/Harsh_Jangid_CV.pdf",
   "availability": "Open for full-time & freelance",
-  "marquee": ["Reels", "Carousels", "Thumbnails", "Branding", "Motion Graphics", "Ad Creatives", "Content Strategy", "Infographics"],
+  "marquee": [
+    "Reels",
+    "Carousels",
+    "Thumbnails",
+    "Branding",
+    "Motion Graphics",
+    "Ad Creatives",
+    "Content Strategy",
+    "Infographics"
+  ],
   "socials": [
-    { "label": "Instagram", "href": "https://instagram.com/" },
-    { "label": "LinkedIn", "href": "https://linkedin.com/in/" },
-    { "label": "Behance", "href": "https://behance.net/" },
-    { "label": "YouTube", "href": "https://youtube.com/" }
+    {
+      "label": "Instagram",
+      "href": "https://instagram.com/"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://linkedin.com/in/"
+    },
+    {
+      "label": "Behance",
+      "href": "https://behance.net/"
+    },
+    {
+      "label": "YouTube",
+      "href": "https://youtube.com/"
+    }
   ],
   "highlights": [
-    { "value": "2+", "label": "years in design & social" },
-    { "value": "500+", "label": "creatives shipped" },
-    { "value": "2", "label": "brands managed end-to-end" }
+    {
+      "value": "6+",
+      "label": "years in design & social"
+    },
+    {
+      "value": "500+",
+      "label": "creatives shipped"
+    },
+    {
+      "value": "2",
+      "label": "brands managed end-to-end"
+    }
   ],
   "about": [
     "I'm a graphic designer and social media executive from Jaipur. Right now I handle design and social for two NRI-focused brands — SaveTaxs and Visament — at Hornet Dynamics, from first concept to published post.",
@@ -51,36 +81,155 @@
     }
   ],
   "skills": [
-    { "group": "Design", "items": ["Social creatives", "Carousels & infographics", "YouTube thumbnails", "Brand identity", "Ad banners", "Print & presentation"] },
-    { "group": "Video & Motion", "items": ["Reels & Shorts editing", "Motion graphics", "Subtitles & hooks", "Colour & sound polish"] },
-    { "group": "Social Media", "items": ["Content strategy & calendar", "Instagram · YouTube · LinkedIn", "Analytics & reporting", "Community management", "Trend research"] },
-    { "group": "Tools", "items": ["Photoshop", "Illustrator", "Premiere Pro", "After Effects", "Figma", "Canva", "CapCut", "Meta Business Suite"] }
+    {
+      "group": "Design",
+      "items": [
+        "Social creatives",
+        "Carousels & infographics",
+        "YouTube thumbnails",
+        "Brand identity",
+        "Ad banners",
+        "Print & presentation"
+      ]
+    },
+    {
+      "group": "Video & Motion",
+      "items": [
+        "Reels & Shorts editing",
+        "Motion graphics",
+        "Subtitles & hooks",
+        "Colour & sound polish"
+      ]
+    },
+    {
+      "group": "Social Media",
+      "items": [
+        "Content strategy & calendar",
+        "Instagram · YouTube · LinkedIn",
+        "Analytics & reporting",
+        "Community management",
+        "Trend research"
+      ]
+    },
+    {
+      "group": "Tools",
+      "items": [
+        "Photoshop",
+        "Illustrator",
+        "Premiere Pro",
+        "After Effects",
+        "Figma",
+        "Canva",
+        "CapCut",
+        "Meta Business Suite"
+      ]
+    }
   ],
   "education": [
-    { "degree": "Bachelor's Degree", "school": "University name", "period": "2021 — 2024" },
-    { "degree": "Diploma in Graphic Design", "school": "Institute name", "period": "2023" }
+    {
+      "degree": "Bachelor's Degree",
+      "school": "University name",
+      "period": "2021 — 2024"
+    },
+    {
+      "degree": "Diploma in Graphic Design",
+      "school": "Institute name",
+      "period": "2023"
+    }
   ],
   "portfolio": [
-    { "title": "NRI Tax Explainer Reels", "category": "Reels", "client": "SaveTaxs", "image": "/projects/project-01.jpg", "href": "" },
-    { "title": "Instagram Carousel Series", "category": "Carousels", "client": "SaveTaxs", "image": "/projects/project-02.jpg", "href": "" },
-    { "title": "YouTube Thumbnail Set", "category": "Thumbnails", "client": "Visament", "image": "/projects/project-03.jpg", "href": "" },
-    { "title": "OCI Card Process Infographics", "category": "Infographics", "client": "Visament", "image": "/projects/project-04.jpg", "href": "" },
-    { "title": "Brand Template System", "category": "Branding", "client": "SaveTaxs", "image": "/projects/project-05.jpg", "href": "" },
-    { "title": "Ad Creatives — Google & Meta", "category": "Ads", "client": "SaveTaxs", "image": "/projects/project-06.jpg", "href": "" },
-    { "title": "Festival & Campaign Posts", "category": "Social", "client": "Visament", "image": "/projects/project-07.jpg", "href": "" },
-    { "title": "App Store Screens — HelpOCI", "category": "Branding", "client": "HelpOCI", "image": "/projects/project-08.jpg", "href": "" }
+    {
+      "title": "NRI Tax Explainer Reels",
+      "category": "Reels",
+      "client": "SaveTaxs",
+      "image": "/projects/project-01.jpg",
+      "href": ""
+    },
+    {
+      "title": "Instagram Carousel Series",
+      "category": "Carousels",
+      "client": "SaveTaxs",
+      "image": "/projects/project-02.jpg",
+      "href": ""
+    },
+    {
+      "title": "YouTube Thumbnail Set",
+      "category": "Thumbnails",
+      "client": "Visament",
+      "image": "/projects/project-03.jpg",
+      "href": ""
+    },
+    {
+      "title": "OCI Card Process Infographics",
+      "category": "Infographics",
+      "client": "Visament",
+      "image": "/projects/project-04.jpg",
+      "href": ""
+    },
+    {
+      "title": "Brand Template System",
+      "category": "Branding",
+      "client": "SaveTaxs",
+      "image": "/projects/project-05.jpg",
+      "href": ""
+    },
+    {
+      "title": "Ad Creatives — Google & Meta",
+      "category": "Ads",
+      "client": "SaveTaxs",
+      "image": "/projects/project-06.jpg",
+      "href": ""
+    },
+    {
+      "title": "Festival & Campaign Posts",
+      "category": "Social",
+      "client": "Visament",
+      "image": "/projects/project-07.jpg",
+      "href": ""
+    },
+    {
+      "title": "App Store Screens — HelpOCI",
+      "category": "Branding",
+      "client": "HelpOCI",
+      "image": "/projects/project-08.jpg",
+      "href": ""
+    }
   ],
   "workLinks": [
-    { "label": "SaveTaxs on Instagram", "href": "https://instagram.com/savetaxs", "note": "Reels, carousels, daily posts" },
-    { "label": "SaveTaxs on YouTube", "href": "https://youtube.com/@savetaxs", "note": "Thumbnails & video edits" },
-    { "label": "Visament on Instagram", "href": "https://instagram.com/visament", "note": "Creatives & campaigns" },
-    { "label": "savetaxs.com", "href": "https://savetaxs.com", "note": "Website graphics" },
-    { "label": "visament.com", "href": "https://visament.com", "note": "Website graphics" }
+    {
+      "label": "SaveTaxs on Instagram",
+      "href": "https://instagram.com/savetaxs",
+      "note": "Reels, carousels, daily posts"
+    },
+    {
+      "label": "SaveTaxs on YouTube",
+      "href": "https://youtube.com/@savetaxs",
+      "note": "Thumbnails & video edits"
+    },
+    {
+      "label": "Visament on Instagram",
+      "href": "https://instagram.com/visament",
+      "note": "Creatives & campaigns"
+    },
+    {
+      "label": "savetaxs.com",
+      "href": "https://savetaxs.com",
+      "note": "Website graphics"
+    },
+    {
+      "label": "visament.com",
+      "href": "https://visament.com",
+      "note": "Website graphics"
+    }
   ],
   "seo": {
     "title": "Harsh Jangid — Graphic Designer & Social Media Executive",
     "description": "Portfolio of Harsh Jangid, graphic designer and social media executive from Jaipur. Reels, carousels, thumbnails, branding and social media growth.",
     "url": "https://harsh-jangid.vercel.app"
   },
-  "admin": { "owner": "harshjangid8696-prog", "repo": "harsh-jangid", "branch": "main" }
+  "admin": {
+    "owner": "harshjangid8696-prog",
+    "repo": "harsh-jangid-",
+    "branch": "main"
+  }
 }
