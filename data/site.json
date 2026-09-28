@@ -140,30 +140,30 @@
   "portfolio": [
     {
       "title": "Simplifying NRI Taxes Worldwide 🌍",
-      "category": "Reels",
+      "category": "Reels, Carousels",
       "client": "SaveTaxs",
       "image": "/projects/-9-500-tax-mistake.jpg",
       "href": "https://www.instagram.com/savetaxs_official"
     },
     {
       "title": "NRI Tax & Compliance Made Simple",
-      "category": "Carousels",
+      "category": "Reels, Videos",
       "client": "SaveTaxs",
       "image": "/projects/savetaxs-52415.jpg",
       "href": "https://www.youtube.com/@Savetaxs"
     },
     {
-      "title": "YouTube Thumbnail Set",
-      "category": "Thumbnails",
+      "title": "",
+      "category": "Reels, Videos",
       "client": "Visament",
       "image": "/projects/visament-52412.jpg",
       "href": ""
     },
     {
-      "title": "",
-      "category": "Social",
+      "title": "Your NRI Document & OCI Card Expert",
+      "category": "Reels, Carousels",
       "client": "Visament",
-      "image": "",
+      "image": "/projects/fake-nri-admission-racket-exposed.jpg",
       "href": ""
     }
   ],
