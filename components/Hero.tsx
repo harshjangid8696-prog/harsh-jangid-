@@ -52,7 +52,7 @@ export default function Hero() {
             <svg viewBox="0 0 100 100" className="h-full w-full">
               <defs><path id="c" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" /></defs>
               <circle cx="50" cy="50" r="48" className="fill-ink" />
-              <text className="fill-white font-display font-extrabold" fontSize="11.5" letterSpacing="2"><textPath href="#c">DESIGN · SOCIAL · MOTION · </textPath></text>
+              <text className="fill-white font-display font-extrabold" fontSize="11.5" letterSpacing="2"><textPath href="#c">GRAPHIC DESIGN · SOCIAL MEDIA · </textPath></text>
               <text x="50" y="55" textAnchor="middle" className="fill-white" fontSize="18">✦</text>
             </svg>
           </div>
