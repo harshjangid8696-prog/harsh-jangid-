@@ -192,32 +192,32 @@
   "workLinks": [
     {
       "label": "SaveTaxs on Instagram",
-      "href": "https://instagram.com/savetaxs",
+      "href": "instagram.com/savetaxs_official",
       "note": "Reels, carousels, daily posts"
     },
     {
       "label": "SaveTaxs on YouTube",
-      "href": "https://youtube.com/@savetaxs",
-      "note": "Thumbnails & video edits"
+      "href": "https://www.youtube.com/@Savetaxs",
+      "note": "Thumbnails"
     },
     {
       "label": "Visament on Instagram",
-      "href": "https://instagram.com/visament",
-      "note": "Creatives & campaigns"
+      "href": "https://www.instagram.com/nridocs_",
+      "note": "Reels, carousels, daily posts"
     },
     {
-      "label": "savetaxs.com",
-      "href": "https://savetaxs.com",
+      "label": "Visament on YouTube",
+      "href": "https://www.youtube.com/@Visament",
       "note": "Website graphics"
     },
     {
-      "label": "visament.com",
-      "href": "https://visament.com",
+      "label": "visament",
+      "href": "https://visament.com/",
       "note": "Website graphics"
     },
     {
-      "label": "",
-      "href": "https://",
+      "label": "SaveTaxs",
+      "href": "https://savetaxs.com/",
       "note": ""
     }
   ],
