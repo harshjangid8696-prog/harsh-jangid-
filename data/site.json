@@ -114,14 +114,19 @@
   ],
   "education": [
     {
-      "degree": "Bachelor's Degree",
-      "school": "University name",
-      "period": "2021 — 2024"
+      "degree": "Bachelor of Computer Applications",
+      "school": "Jaipur national university",
+      "period": "2026 — 2029"
     },
     {
       "degree": "Diploma in Graphic Design",
-      "school": "Institute name",
-      "period": "2023"
+      "school": "Technoglobe IT training institute",
+      "period": "Jan 2024 - June 2024"
+    },
+    {
+      "degree": "Bachelor of Computer Applications.",
+      "school": "Sanjeevani College Of Nursing,Udaipur",
+      "period": "2022-2023 (Discontinued)"
     }
   ],
   "portfolio": [
@@ -207,6 +212,11 @@
       "label": "visament.com",
       "href": "https://visament.com",
       "note": "Website graphics"
+    },
+    {
+      "label": "",
+      "href": "https://",
+      "note": ""
     }
   ],
   "seo": {
