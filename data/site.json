@@ -92,19 +92,10 @@
       ]
     },
     {
-      "group": "Video & Motion",
-      "items": [
-        "Reels & Shorts editing",
-        "Motion graphics",
-        "Subtitles & hooks",
-        "Colour & sound polish"
-      ]
-    },
-    {
       "group": "Social Media",
       "items": [
         "Content strategy & calendar",
-        "Instagram · YouTube · LinkedIn",
+        "Instagram · Facebook · YouTube · LinkedIn",
         "Analytics & reporting",
         "Community management",
         "Trend research"
@@ -115,11 +106,8 @@
       "items": [
         "Photoshop",
         "Illustrator",
-        "Premiere Pro",
-        "After Effects",
         "Figma",
         "Canva",
-        "CapCut",
         "Meta Business Suite"
       ]
     }
