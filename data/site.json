@@ -139,24 +139,31 @@
   ],
   "portfolio": [
     {
-      "title": "NRI Tax Explainer Reels",
+      "title": "Simplifying NRI Taxes Worldwide 🌍",
       "category": "Reels",
       "client": "SaveTaxs",
       "image": "/projects/-9-500-tax-mistake.jpg",
-      "href": ""
+      "href": "https://www.instagram.com/savetaxs_official"
     },
     {
-      "title": "Instagram Carousel Series",
+      "title": "NRI Tax & Compliance Made Simple",
       "category": "Carousels",
       "client": "SaveTaxs",
-      "image": "/projects/60abd9d7-fcac-489c-a3ea-a09f62507f3b.png",
-      "href": ""
+      "image": "/projects/savetaxs-52415.jpg",
+      "href": "https://www.youtube.com/@Savetaxs"
     },
     {
       "title": "YouTube Thumbnail Set",
       "category": "Thumbnails",
       "client": "Visament",
       "image": "/projects/visament-52412.jpg",
+      "href": ""
+    },
+    {
+      "title": "",
+      "category": "Social",
+      "client": "Visament",
+      "image": "",
       "href": ""
     }
   ],
